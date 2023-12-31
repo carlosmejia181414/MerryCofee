@@ -1,0 +1,61 @@
+{
+	"name": "Mery Coffee Shop",
+	"products": [
+		{
+			"name": "American Coffee",
+			"description": "Caffè Americano is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor",
+			"Price": 8,
+			"stock": 15,
+			"Categoria": "Coffee",
+			"estado": "1",
+			"img": "american.webp"
+		},
+		{
+			"name": "Espresso Coffee",
+			"description": "Espresso is a coffee-brewing method of Italian origin, in which a small amount of nearly boiling water (about 90 °C or 190 °F) is forced under 9–10 bars",
+			"Price": 7,
+			"stock": 30,
+			"Categoria": "Coffee",
+			"estado": "1",
+			"img": "expresso.jpg"
+		},
+		{
+			"name": "Cappuccino Coffee",
+			"description": "A cappuccino is an espresso-based coffee drink that originated in Austria and was later popularized in Italy and is prepared with steamed milk foam",
+			"Price": 12,
+			"stock": 12,
+			"Categoria": "Coffee",
+			"estado": "1",
+			"img": "capuccino.jpg"
+		},
+		{
+			"name": "Mocha Coffee",
+			"description": "A caffè mocha also called mocaccino is a chocolate-flavoured warm beverage that is a variant of a caffè latte commonly served in a glass rather than a mug.",
+			"Price": 18,
+			"stock": 13,
+			"Categoria": "Coffee",
+			"estado": "1",
+			"img": "mocha.webp"
+		},
+		{
+			"name": "Croissant",
+			"description": "A croissant is a buttery, flaky, Austrian viennoiserie pastry inspired by the shape of the Austrian kipferl but using the French yeast-leavened laminated",
+			"Price": 13,
+			"stock": 10,
+			"Categoria": "Mini Bites",
+			"estado": "1",
+			"img": "croissant.jpg"
+		},
+		{
+			"name": "Royal Burger",
+			"description": "Royal Burger on Richmond Rd had the best burgers, onion rings and chocolate milk shakes",
+			"Price": 10,
+			"stock": 24,
+			"Categoria": "Mini Bites",
+			"estado": "1",
+			"img": "royal.jpg"
+		}
+	],
+	"address": "1712 Frobisher Lane ",
+	"Phone": 432546098
+}

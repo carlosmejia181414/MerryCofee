@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mery Coffee Shop</title>
+		<!--        Link para cargar Icono -->
+		<link rel="shortcut icon" href="images/logo.png" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
+		<script
+			src="https://kit.fontawesome.com/dcae34017c.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="scripts/animation.js" defer></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+		<script src="scripts/validation.js" defer></script>
+		<script src="scripts/getData.js" defer></script>
+		<script src="scripts/events.js" defer></script>
+	</head>
+	<body class="bodySection">
+		<header class="header">
+			<a href="index.html" class="logo"
+				><img
+					src="images/logo.png"
+					alt="Logo"
+					class="logo scroll-content fadeLeft"
+				/><span class="textLogo scroll-content fadeTop"
+					>Mery Coffee Shop</span
+				></a
+			>
+			<input type="checkbox" id="menu-bar" />
+			<label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+
+			<nav class="navbar">
+				<ul>
+					<li>
+						<a href="index.html" id="myBtn"
+							><span class="material-symbols-outlined"> local_cafe </span>
+							<span class="menuLink">Reservations and Orders</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="section1" id="section">
+				<div class="title">Mery Coffee - Orders and Reservations</div>
+				<div class="introText scroll-content fadeLeft">
+					<h3 class="subtitle">
+						Looking for a toasty cup of delicious coffee to comfort you through
+						Ottawa's cold winter season?
+					</h3>
+					<br />
+					<p>
+						Our National Capital Region has a surprisingly robust coffee scene,
+						and it will not disappoint.
+					</p>
+					<br />
+					<p>
+						Let's face it though we're not just looking for coffee. We're
+						looking to sit in a cozy spot with cool vibes and friendly baristas.
+						We're not only on the hunt for a great pour, we want the best
+						experience.
+					</p>
+				</div>
+				<div class="mainContainer">
+					<div class="containerAppointment scroll-content fadeRight">
+						<div class="containerAppointment-item">
+							<img
+								src="images/imagen.jpg"
+								alt="tiresAppointment"
+								class="tiresAppointment"
+							/>
+						</div>
+						<div class="containerAppointment-item">
+							<div class="form-container">
+								<form
+									name="form"
+									id="formID"
+									action="summary.html"
+									method="post"
+								>
+									<h4 class="h4Apo">Customer Information :</h4>
+									<div class="flexApo">
+										<span class="material-symbols-outlined iconoAppointment">
+											settings_accessibility
+										</span>
+										<select name="select" id="select" class="inputApoint">
+											<option value="chose">Chose Option</option>
+											<option value="Mr">Mr.</option>
+											<option value="Mrs">Mrs.</option>
+											<option value="Ms">Ms.</option>
+											<option value="Miss">Miss.</option></select
+										><span class="forgot">*</span>
+									</div>
+									<div class="flexApo">
+										<span class="material-symbols-outlined iconoAppointment">
+											person
+										</span>
+										<input
+											type="text"
+											placeholder="Your full name"
+											class="inputApoint"
+											name="name"
+											id="name"
+										/><span class="forgot"> *</span>
+									</div>
+									<div class="flexApo">
+										<span class="material-symbols-outlined iconoAppointment">
+											mail
+										</span>
+										<input
+											type="text"
+											id="address"
+											name="address"
+											placeholder="Your email"
+											class="inputApoint"
+										/><span class="forgot"> *</span>
+									</div>
+									<div class="flexApo">
+										<span class="material-symbols-outlined iconoAppointment">
+											call
+										</span>
+										<input
+											type="text"
+											placeholder="Your phone"
+											class="inputApoint"
+											id="phone"
+											name="phone"
+											onkeypress="return valideKey(event);"
+										/><span class="forgot"> *</span>
+									</div>
+									<h4 class="h4Apo">Reservation :</h4>
+									<div class="flexApo">
+										<span class="material-symbols-outlined iconoAppointment">
+											calendar_month
+										</span>
+										<input
+											type="date"
+											placeholder="Model"
+											class="inputApoint"
+											id="date"
+											name="date"
+										/><span class="forgot">*</span>
+										<span>&nbsp&nbsp&nbsp&nbsp</span>
+										<span class="material-symbols-outlined iconoAppointment">
+											schedule
+										</span>
+										<input
+											type="time"
+											placeholder="year"
+											class="inputApoint"
+											id="time"
+											name="time"
+										/><span class="forgot">*</span>
+									</div>
+									<p class="labelApo2">Location:</p>
+
+									<div class="flexApo">
+										<div class="radioDiv">
+											<input
+												type="radio"
+												name="fav_language"
+												value="Coffee Center"
+												id="Center"
+												name="radioOption"
+											/>
+
+											<label for="center" class="labelApo">Coffee Center</label
+											><br />
+
+											<input
+												type="radio"
+												name="fav_language"
+												value="Coffee Balcony"
+												id="Balcony"
+												name="radioOption"
+											/>
+
+											<label for="balcony" class="labelApo"
+												>Coffee Balcony</label
+											><br />
+
+											<input
+												type="radio"
+												name="fav_language"
+												value="Coffee Relax"
+												id="relax"
+												name="radioOption"
+											/>
+
+											<label for="relax" class="labelApo">Coffee Relax</label>
+										</div>
+									</div>
+									<div class="flexApo">
+										<div class="radioDiv2">
+											<p class="labelApo2">Your Order:</p>
+											<div id="divorders"></div>
+											<!-- 
+												<textarea
+													rows="5"
+													cols="24"
+													class="inputApoint2"
+													id="orders"
+													name="orders"
+													class="txtOrders"
+												></textarea> -->
+										</div>
+									</div>
+
+									<input
+										type="checkbox"
+										id="promotion"
+										name="promotion"
+										value="Bike"
+										class="check"
+										tabindex="9"
+									/>
+									<p class="checkLabel">
+										Yes, I'd like to receive promotional emails from Point
+										Canada. I understand that I may withdraw my consent at any
+										time.
+									</p>
+									<br />
+									<input
+										type="checkbox"
+										id="conditions"
+										name="conditions"
+										value="Bike"
+										class="check"
+										tabindex="10"
+									/>
+									<p class="checkLabel">
+										I have read and accept the Points privacy policy
+									</p>
+
+									<p class="forgot2">
+										The fields with an asterisk (*) are mandatory
+									</p>
+									<div class="buttonReg" id="buttonReg">
+										<input
+											type="submit"
+											value="Send"
+											class="button-item"
+											tabindex="11"
+										/>
+										<input
+											type="reset"
+											value="reset"
+											class="button-item"
+											tabindex="12"
+										/>
+									</div>
+									<br />
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section2">
+				<div class="mainContainer2" id="mainContainer2">
+					<div class="containerApi">
+						<div class="containerAppointment-item2">
+							<!-- Creating products with API -->
+							<script src="scripts/main.js" defer></script>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="containerFooter">
+				<div class="footerItem">
+					<p class="create">Create by: Carlos Mejia</p>
+				</div>
+				<div class="footerItem">
+					<a href="index.html" class="logoFooter"
+						><img src="images/logo.png" alt="Logo" class="logo"
+					/></a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

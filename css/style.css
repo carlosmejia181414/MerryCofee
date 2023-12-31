@@ -1,0 +1,792 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	text-transform: capitalize;
+	text-decoration: none;
+	background-color: #00000000;
+}
+
+:root {
+	--bg-background: #472301;
+	--bg-hoverA: #ffffff;
+	--img: url('https://www.xtrafondos.com/wallpapers/resized/textura-vieja-hoja-de-papel-arrugada-cafe-3275.jpg?s=large');
+}
+/* Setup for Header */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: var(--bg-background);
+	box-shadow: 0 5px 10px white;
+	padding: 0px 7%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	padding: 20px;
+}
+
+.logo {
+	height: 70px;
+	border-radius: 50%;
+	border: none;
+}
+
+header .navbar ul {
+	list-style: none;
+}
+
+header .navbar ul li {
+	position: relative;
+	float: left;
+}
+
+header .navbar ul li a {
+	font-size: 18px;
+	padding: 10px 25px;
+	color: white;
+	display: flex;
+}
+
+header .navbar ul li a:hover {
+	background-color: var(--bg-hoverA);
+	color: var(--bg-background);
+	border-radius: 5px;
+}
+
+header .navbar ul li a:active {
+	background-color: var(--bg-background);
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+header .navbar ul li ul {
+	position: absolute;
+	left: 0;
+	width: 200px;
+	background: white;
+	border-radius: 0 0 10px 10px;
+	display: none;
+}
+
+header .navbar ul li ul li {
+	width: 100%;
+	border-top: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+	left: 200px;
+	top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+	display: initial;
+}
+
+#menu-bar {
+	display: none;
+}
+
+header label {
+	color: #757575;
+	cursor: pointer;
+	display: none;
+}
+
+/* Responsive web/*  */
+@media (max-width: 768px) {
+	header {
+		padding: 20px;
+	}
+
+	header label {
+		display: initial;
+	}
+
+	header .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: #333333;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		display: none;
+	}
+
+	header .navbar ul li {
+		width: 100%;
+	}
+
+	header .navbar ul li ul {
+		position: relative;
+		width: 100%;
+	}
+
+	header .navbar ul li ul li {
+		background: #eeeeee;
+	}
+
+	header .navbar ul li ul li ul {
+		width: 100%;
+		left: 0;
+	}
+
+	#menu-bar:checked ~ .navbar {
+		display: initial;
+	}
+
+	/* //CSS RESPONSIVE TO REGISTER  */
+	.containerReg {
+		margin-right: 1px;
+		margin-left: 1px;
+	}
+	.containerRegItem {
+		display: none;
+	}
+	.containerRegItem2 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	/* CSS RESPONSIVE TO LOGIN */
+	.containerLogin {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* MOVE HR */
+	.hrLogin {
+		display: none;
+	}
+
+	.containerLogin {
+		display: grid;
+		grid-template-columns: 50%;
+	}
+	.containerLogin-Item {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+}
+
+.section1 {
+	margin-top: 140px;
+}
+
+.section2 {
+	margin-top: 140px;
+}
+
+.inputAccount {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	width: 90%;
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+
+.divItem {
+	width: 40%;
+}
+
+/* CSS TO REGISTER */
+.containerReg {
+	margin-top: -80px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding: 50px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 100px;
+}
+
+.containerRegItem {
+	margin: auto;
+	padding: 20px;
+	width: auto;
+	margin-top: 30px;
+}
+.containerRegItem2 {
+	margin: auto;
+	width: auto;
+	padding: 20px;
+}
+
+.form-container {
+	margin: auto;
+}
+
+.containerRegItem > h1 {
+	color: var(--bg-background);
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.h4Reg {
+	color: #424040;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.containerRegItem > p {
+	font-size: 13px;
+	color: #939393;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.checkLabel {
+	font-size: 12px;
+	color: #939393;
+	text-align: justify;
+	text-indent: 0px;
+	padding-left: 23px;
+}
+.containerRegItem2 > form-container > p {
+	font-size: 12px;
+	color: #939393;
+	margin-bottom: 10px;
+}
+
+.check {
+	float: left;
+	margin-right: 10px;
+}
+.containerRegItem > ul > li {
+	font-size: 13px;
+	color: #939393;
+	margin-bottom: 10px;
+}
+
+.containerRegItem > img {
+	width: 100%;
+	height: auto;
+	align-items: center;
+}
+
+.form-container {
+	background-color: white;
+	width: auto;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	padding: 20px 20px 0 20px;
+	box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+
+.forgot {
+	font-size: 16px;
+	font-weight: bold;
+	color: red;
+}
+.forgot2 {
+	font-size: 11px;
+	color: red;
+	padding-left: 23px;
+}
+
+.buttonReg {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 15px;
+}
+
+.button-item {
+	padding: 10px;
+	width: 40%;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--bg-background);
+	color: #ffffff;
+}
+
+.button-item:hover {
+	background-color: #964900;
+	box-shadow: 2px 2px 22px grey;
+}
+
+.inputAccount:focus {
+	outline: none;
+}
+
+.labelRegister {
+	font-size: 15px;
+	color: var(--bg-background);
+}
+
+/* CSS TO LOGIN */
+.containerLogin {
+	margin: auto;
+	padding: 20px;
+	width: 50%;
+	height: 70%;
+	box-shadow: 12px 12px 22px grey;
+	background-color: white;
+	border-radius: 10px;
+	opacity: 0.8;
+}
+
+.loginIMG {
+	height: 100px;
+	width: auto;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: var(--bg-background);
+}
+
+.createAccountIMG {
+	height: 130px;
+	width: auto;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.containerLogin {
+	display: grid;
+	grid-template-columns: 50% 5% 40%;
+}
+
+.h2Login {
+	font-size: 17px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: var(--bg-background);
+}
+
+.hrLogin {
+	height: 55vh;
+	width: 0.1vw;
+	border-width: 0;
+	background-color: grey;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.inputLogin {
+	padding: 10px;
+	width: 100%;
+	border: 1px solid grey;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.inputLogin:focus {
+	outline: none;
+}
+
+.buttonLogin {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--bg-background);
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.buttonLogin:hover {
+	box-shadow: 2px 2px 32px grey;
+}
+
+.username {
+	height: 38px;
+	background-color: var(--bg-background);
+	padding: 9px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.divUsername {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.textLogo {
+	font-family: 'Nerko One', cursive;
+	font-size: 35px;
+	color: white;
+	position: relative;
+	top: -25px;
+	margin-left: 10px;
+}
+
+.divbuttonLogin {
+	display: flex;
+	justify-content: center;
+}
+
+.forgotLogin {
+	font-size: 11px;
+	text-align: right;
+	color: red;
+	font-weight: bold;
+}
+
+.bodySection {
+	background-image: var(--img);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/* ************************* *****************************  */
+
+/* ************************* CSS EFFECT SCROLL *****************************  */
+
+.fadeTop {
+	opacity: 0;
+	transform: translate(0, 10vh);
+	transition: all 1s;
+}
+
+.fadeRight {
+	opacity: 0;
+	transform: translate(10vh, 0vh);
+	transition: all 1s;
+}
+
+.fadeLeft {
+	opacity: 0;
+	transform: translate(-10vh, 0vh);
+	transition: all 1s;
+}
+
+.visible {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* ******************************************************  */
+
+/* ***********************CSS Container API*******************************  */
+.containerAPI {
+	background-color: white;
+	width: auto;
+	height: auto;
+	margin: 50px;
+	border-radius: 10px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	padding: 30px;
+	box-shadow: 12px 12px 22px grey;
+	gap: 10px;
+	opacity: 0.8;
+}
+
+/* ******************************************************  */
+
+/* ******************** CSS TO VIDEOS YOUTUBE **********************************  */
+.youtube {
+	border-radius: 10px;
+	box-shadow: 0 0 8px rgba(92, 99, 105, 0.9);
+}
+
+/* ******************** CSS TO APPOINTMENT **********************************  */
+.containerAppointment {
+	display: grid;
+	grid-template-columns: 720px auto;
+}
+
+.mainContainer {
+	width: 1200px;
+	margin: auto;
+	border-radius: 25px;
+	box-shadow: 2px 2px 22px grey;
+}
+
+.tiresAppointment {
+	height: 818px;
+	display: block;
+	margin-right: -19px;
+	margin-top: -0px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 26px;
+}
+
+.appointmentText {
+	font-size: 45px;
+	color: white;
+	text-align: center;
+	margin-bottom: 30px;
+	font-family: 'Anton', sans-serif;
+}
+
+.appointmentTextBottom {
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	margin-top: 30px;
+	font-family: 'Nerko One', cursive;
+}
+
+.h4Apo {
+	color: var(--bg-background);
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: left;
+	font-family: 'Anton', sans-serif;
+}
+
+.iconoAppointment {
+	padding: 5px;
+	background-color: var(--bg-background);
+	color: white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.inputApoint {
+	padding: 5px;
+	width: 100%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid var(--bg-background);
+}
+.inputApoint:focus {
+	outline: none;
+	border: 1px solid var(--bg-background);
+}
+
+.inputApoint2:focus {
+	outline: none;
+	border: 1px solid black;
+}
+
+.flexApo {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+}
+
+.labelApo {
+	font-size: 12px;
+	color: var(--bg-background);
+	text-shadow: 0 1px 0 black;
+}
+
+.labelApo2 {
+	font-size: 12px;
+	color: var(--bg-background);
+	text-shadow: 0px 1px 0px grey;
+	margin-bottom: 7px;
+}
+
+.introText {
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 20px;
+	color: #333333;
+}
+
+.subtitle {
+	color: #333333;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: 'Caveat', cursive;
+}
+
+.introText > p {
+	font-size: 25px;
+	font-family: 'Caveat', cursive;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Chewy', cursive;
+	color: var(--bg-background);
+	font-weight: bold;
+	font-size: 45px;
+	text-shadow: 0 0 10px white;
+}
+
+.footerItem {
+	margin-top: 20px;
+	background-color: var(--bg-background);
+	padding: 5px;
+	width: 100%;
+}
+
+.containerFooter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.create {
+	font-size: 20px;
+	color: white;
+	text-shadow: 0 0 5px black;
+	line-height: 70px;
+	margin-left: 20px;
+}
+
+.logoFooter {
+	float: right;
+}
+
+.radioDiv {
+	width: 45%;
+	height: 80px;
+	padding: 5px;
+	border: 1px solid var(--bg-background);
+	border-radius: 5px;
+}
+
+.radioDiv2 {
+	width: 100%;
+	height: 220px;
+	padding: 5px;
+	border: 1px solid var(--bg-background);
+	border-radius: 5px;
+}
+
+.gridFlexApo {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 30px;
+}
+
+.gridInterno {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.mainContainer2 {
+	width: 1000px;
+	margin: auto;
+	background-color: white;
+	border-radius: 25px;
+	box-shadow: 2px 2px 22px grey;
+}
+
+.containerApi {
+	background-color: white;
+	border-radius: 25px;
+	margin-top: 30px;
+	padding: 20px;
+}
+
+.containerAppointment-item2 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 25px;
+}
+
+.menu {
+	border: 2px solid var(--bg-background);
+	border-radius: 5px;
+	padding: 15px;
+	box-shadow: 2px 2px 22px grey;
+}
+
+.titleCards {
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	font-weight: bold;
+}
+.descripCards {
+	font-size: 12px;
+	color: #424040;
+	text-align: justify;
+	padding: 15px;
+}
+
+.priceCards,
+.StockCards,
+.CategoriaCards {
+	font-size: 15px;
+	color: var(--bg-background);
+	font-family: 'Anton', sans-serif;
+}
+
+.imgCards {
+	padding: 10px;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	display: block;
+	margin: auto;
+}
+
+.summaryul {
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.titlesumary {
+	font-size: 30px;
+	color: var(--bg-background);
+	font-family: 'Anton', sans-serif;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.summaryli {
+	font-size: 15px;
+	color: #333333;
+	font-family: 'Anton', sans-serif;
+	margin-bottom: 5px;
+}
+
+.divContador {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.sing1 {
+	background-color: var(--bg-background);
+	color: white;
+	padding: 5px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.sing1:hover {
+	cursor: pointer;
+}
+
+.sing2 {
+	background-color: var(--bg-background);
+	color: white;
+	padding: 5px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.sing2:hover {
+	cursor: pointer;
+}
+
+.inputamount {
+	border: 1px solid var(--bg-background);
+	width: 20%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.inputamount:focus {
+	outline: none;
+}
+
+.createListul {
+	padding-left: 20px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

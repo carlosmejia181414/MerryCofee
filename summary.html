@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mery Coffee Shop</title>
+		<!--        Link para cargar Icono -->
+		<link rel="shortcut icon" href="images/logo.png" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
+		<script
+			src="https://kit.fontawesome.com/dcae34017c.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="scripts/animation.js" defer></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+	</head>
+	<body class="bodySection" onLoad="gotData();">
+		<header class="header">
+			<a href="index.html" class="logo"
+				><img
+					src="images/logo.png"
+					alt="Logo"
+					class="logo scroll-content fadeLeft"
+				/><span class="textLogo scroll-content fadeTop"
+					>Mery Coffee Shop</span
+				></a
+			>
+			<input type="checkbox" id="menu-bar" />
+			<label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+
+			<nav class="navbar">
+				<ul>
+					<li>
+						<a href="index.html" id="myBtn"
+							><span class="material-symbols-outlined"> local_cafe </span>
+							<span class="menuLink">Reservations and Orders</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="section1" id="section">
+				<div class="mainContainer2">
+					<div class="containerApi">
+						<script src="scripts/gotData.js" defer></script>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="containerFooter">
+				<div class="footerItem">
+					<p class="create">Create by: Carlos Mejia</p>
+				</div>
+				<div class="footerItem">
+					<a href="index.html" class="logoFooter"
+						><img src="images/logo.png" alt="Logo" class="logo"
+					/></a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
