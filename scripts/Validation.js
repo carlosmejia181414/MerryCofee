@@ -1,5 +1,5 @@
 //Validate inputs
-let validate = (e) => {
+function validate (e) {
 	e.preventDefault();
 	var valid = true;
 

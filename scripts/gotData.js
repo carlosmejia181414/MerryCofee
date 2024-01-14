@@ -1,4 +1,4 @@
-let gotData = () => {
+function gotData () {
 	//Recovering the data
 	var val = localStorage.getItem('val');
 	var name = localStorage.getItem('name');

@@ -1,5 +1,5 @@
 //function to add Item
-let addition = (value) => {
+function addition (value) {
 	var inputaddition = document.querySelector(`#inputamount${value}`);
 	valor = parseInt(inputaddition.value);
 	valor++;
@@ -8,7 +8,7 @@ let addition = (value) => {
 };
 
 //function to rest Item
-let rest = (value) => {
+function rest (value) {
 	var inputaddition = document.querySelector(`#inputamount${value}`);
 	valor = parseInt(inputaddition.value);
 	valor--;
@@ -21,7 +21,7 @@ let rest = (value) => {
 	createList();
 };
 
-let createList = () => {
+function createList () {
 	var divorders = document.getElementById('divorders');
 	if (document.getElementById('createListul')) {
 		document.getElementById('createListul').remove();
@@ -44,7 +44,7 @@ let createList = () => {
 };
 
 //function to Get Data
-var getData = () => {
+function getData () {
 	//Getting the data in variables
 	var val = document.querySelector('#select').value;
 	var name = document.querySelector('#name').value;
